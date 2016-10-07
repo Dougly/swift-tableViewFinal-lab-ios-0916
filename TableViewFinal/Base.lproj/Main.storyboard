@@ -1,8 +1,143 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vdu-yN-VHd">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Planets-->
+        <scene sceneID="0gl-Lt-HZ6">
+            <objects>
+                <tableViewController id="sR9-1c-ChU" customClass="PlanetTableViewController" customModule="TableViewFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="148" sectionHeaderHeight="28" sectionFooterHeight="28" id="kUc-TY-R56">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanetCell" id="ZF6-Mr-6cb" customClass="PlanetTableViewCell" customModule="TableViewFinal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="148"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZF6-Mr-6cb" id="a2a-C2-69H">
+                                    <frame key="frameInset" width="375" height="147"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="B23-je-YX7">
+                                            <frame key="frameInset" minX="10" minY="8" width="103" height="147"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJs-T7-1nL">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="36"/>
+                                                    <color key="textColor" red="0.15326744659867786" green="1" blue="0.98387486685982273" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwA-RE-vuK">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orbit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eba-oc-uV9">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbE-ZY-8nv">
+                                            <frame key="frameInset" minX="257" minY="63" width="110" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                            <color key="textColor" red="1" green="0.63701905690000005" blue="0.06193608968" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="B23-je-YX7" firstAttribute="leading" secondItem="a2a-C2-69H" secondAttribute="leading" id="3S8-Bs-BA7"/>
+                                        <constraint firstItem="B23-je-YX7" firstAttribute="top" secondItem="a2a-C2-69H" secondAttribute="top" constant="-8" id="Fhw-6Q-IW2"/>
+                                        <constraint firstItem="B23-je-YX7" firstAttribute="bottom" secondItem="a2a-C2-69H" secondAttribute="bottom" constant="-8.5" id="ewb-QV-0iR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="numberOfDaysFullOrbitLabel" destination="Eba-oc-uV9" id="aQi-0u-i2f"/>
+                                    <outlet property="numberOfFactsLabel" destination="YbE-ZY-8nv" id="au3-59-QL1"/>
+                                    <outlet property="numberOfMoonsLabel" destination="LwA-RE-vuK" id="1fX-yb-7SD"/>
+                                    <outlet property="planetNameLabel" destination="PJs-T7-1nL" id="kMa-jd-VGc"/>
+                                    <segue destination="Qah-AL-spw" kind="show" identifier="pushFact" id="4HT-tV-ebh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sR9-1c-ChU" id="bhO-o4-kLf"/>
+                            <outlet property="delegate" destination="sR9-1c-ChU" id="4qx-7A-NWW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Planets" id="QNp-UT-EqB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="caf-nM-iTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.8" y="172.26386806596702"/>
+        </scene>
+        <!--Fact Table View Controller-->
+        <scene sceneID="s86-pF-zSB">
+            <objects>
+                <tableViewController id="Qah-AL-spw" customClass="FactTableViewController" customModule="TableViewFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="144" sectionHeaderHeight="28" sectionFooterHeight="28" id="byV-rO-f1X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FactCell" rowHeight="144" id="idf-XB-HuV" customClass="FactTableViewCell" customModule="TableViewFinal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="144"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="idf-XB-HuV" id="7wZ-WF-SkG">
+                                    <frame key="frameInset" width="375" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="fact text view" translatesAutoresizingMaskIntoConstraints="NO" id="h4Q-0V-eFf">
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.5163612565445026" green="0.14826669699468709" blue="0.16650059749579971" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="h4Q-0V-eFf" firstAttribute="leading" secondItem="7wZ-WF-SkG" secondAttribute="leading" id="JAt-Jj-6lk"/>
+                                        <constraint firstItem="h4Q-0V-eFf" firstAttribute="trailing" secondItem="7wZ-WF-SkG" secondAttribute="trailing" id="Ko7-DZ-aRt"/>
+                                        <constraint firstItem="h4Q-0V-eFf" firstAttribute="top" secondItem="7wZ-WF-SkG" secondAttribute="top" id="kB3-aU-RXw"/>
+                                        <constraint firstItem="h4Q-0V-eFf" firstAttribute="bottom" secondItem="7wZ-WF-SkG" secondAttribute="bottom" id="nJY-4k-JJv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="factTextView" destination="h4Q-0V-eFf" id="Ley-Gj-yQe"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qah-AL-spw" id="Btg-Eq-9Z3"/>
+                            <outlet property="delegate" destination="Qah-AL-spw" id="hXT-li-a2Q"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0X-Ui-GYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848.8" y="172.26386806596702"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZJz-q4-IoY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vdu-yN-VHd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4lx-fJ-vLV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sR9-1c-ChU" kind="relationship" relationship="rootViewController" id="2NK-eO-CvA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPE-P1-08r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="172.26386806596702"/>
+        </scene>
+    </scenes>
 </document>

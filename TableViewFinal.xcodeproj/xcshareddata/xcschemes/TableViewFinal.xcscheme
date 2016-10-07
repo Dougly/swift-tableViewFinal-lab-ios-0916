@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0800"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -79,6 +79,24 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "LOG_PATH=`echo &quot;${BUILD_DIR}&quot; | sed &quot;s/Build\/Products/Logs\/Test/&quot;`&#10;&quot;${SRCROOT}/test_runner.sh&quot; &quot;$LOG_PATH&quot; &quot;${SRCROOT}&quot;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "5BEE48CB1D14959400F7B63E"
+                     BuildableName = "TableViewFinal.app"
+                     BlueprintName = "TableViewFinal"
+                     ReferencedContainer = "container:TableViewFinal.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
